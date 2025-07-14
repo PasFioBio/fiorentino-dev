@@ -74,17 +74,22 @@ _iub.csConfiguration = {"countryDetection":true,
                   this.classList.add('is-loaded');
                }, false);
          }
-      }</script><div hidden id="snipcart" data-api-key="NWU2NTMwODctNDk0ZS00OGMxLWFjMjEtZTZiOTRiMDFlOTNlNjM4ODgwMjU4ODYxODc3MDYz" data-config-modal-style="side"></div><script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script><link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css"><div id="snipcart-summary-bar" style="position: fixed;
+      }</script><div hidden id="snipcart" data-api-key="NWU2NTMwODctNDk0ZS00OGMxLWFjMjEtZTZiOTRiMDFlOTNlNjM4ODgwMjU4ODYxODc3MDYz" data-config-modal-style="side"></div><script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script><link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css">html Copia Modifica<div id="snipcart-summary-bar" style="position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background: #222;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
-  font-size: 0.9rem;
-  display: none;
-  z-index: 9999;">Articoli nel carrello: <span id="snipcart-total-items">0</span> – Totale: €<span id="snipcart-total-price">0.00</span></div><script>document.addEventListener('snipcart.ready', () => {
+  font-size: 0.95rem;
+  z-index: 9999;
+  display: none;"><span class="snipcart-show-cart" title="Apri il carrello" style="cursor: pointer;
+      font-size: 1.3em;
+      margin-right: 10px;
+      user-select: none;">🛒 </span><span>Articoli nel carrello: <span id="snipcart-total-items">0</span> – Totale: €<span id="snipcart-total-price">0.00</span></span></div><script>document.addEventListener('snipcart.ready', () => {
     Snipcart.store.subscribe(() => {
       const cart = Snipcart.store.getState().cart;
       const totalItems = cart.items.count;
