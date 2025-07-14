@@ -85,16 +85,12 @@ _iub.csConfiguration = {"countryDetection":true,
   width: 100%;
   background: #222;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* 👈 divide a sinistra e destra */
-  padding: 10px 20px;
-  font-size: 0.95rem;
-  z-index: 9999;
   display: none;
-  gap: 20px;"><span class="snipcart-checkout" title="Apri il carrello" style="cursor: pointer;
-      font-size: 1.5rem;
-      margin-right: 20px;"><i class="fas fa-shopping-cart"></i> </span><span>Articoli nel carrello: <span id="snipcart-total-items">0</span> – Totale: €<span id="snipcart-total-price">0.00</span></span></div><script>document.addEventListener('DOMContentLoaded', function () {
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  z-index: 9999;"><span>Articoli: <span id="snipcart-total-items">0</span></span> <span>Totale: €<span id="snipcart-total-price">0.00</span></span> <span class="snipcart-checkout" title="Apri il carrello" style="cursor: pointer;">🛒</span></div><script>document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('snipcart.ready', function () {
       const bar = document.getElementById('snipcart-summary-bar');
       const itemsEl = document.getElementById('snipcart-total-items');
