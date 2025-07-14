@@ -90,4 +90,34 @@ _iub.csConfiguration = {"countryDetection":true,
       font-size: 1.6em;
       margin-right: 20px;
       margin-left: -10px;
-      user-select: none;">🛒 </span><span>Articoli nel carrello: <span id="snipcart-total-items">0</span> – Totale: €<span id="snipcart-total-price">0.00</span></span></div></body></html>
+      user-select: none;">🛒 </span><span>Articoli nel carrello: <span id="snipcart-total-items">0</span> – Totale: €<span id="snipcart-total-price">0.00</span></span></div><script>document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('snipcart.ready', function () {
+      const bar = document.getElementById('snipcart-summary-bar');
+      const itemsEl = document.getElementById('snipcart-total-items');
+      const priceEl = document.getElementById('snipcart-total-price');
+
+      function updateBar(cart) {
+        const items = cart.items.count;
+        const total = cart.total.toFixed(2);
+
+        itemsEl.textContent = items;
+        priceEl.textContent = total;
+
+        if (items > 0) {
+          bar.style.display = 'flex';
+        } else {
+          bar.style.display = 'none';
+        }
+      }
+
+      // Inizializzazione con stato attuale
+      const initialCart = Snipcart.store.getState().cart;
+      updateBar(initialCart);
+
+      // Aggiornamento automatico al cambio carrello
+      Snipcart.store.subscribe(() => {
+        const updatedCart = Snipcart.store.getState().cart;
+        updateBar(updatedCart);
+      });
+    });
+  });</script></body></html>
