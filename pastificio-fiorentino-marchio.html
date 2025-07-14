@@ -74,7 +74,7 @@ _iub.csConfiguration = {"countryDetection":true,
                   this.classList.add('is-loaded');
                }, false);
          }
-      }</script><div hidden id="snipcart" data-api-key="NWU2NTMwODctNDk0ZS00OGMxLWFjMjEtZTZiOTRiMDFlOTNlNjM4ODgwMjU4ODYxODc3MDYz" data-config-modal-style="side"></div><script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script><link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css">html Copia Modifica<div id="snipcart-summary-bar" style="position: fixed;
+      }</script><div hidden id="snipcart" data-api-key="NWU2NTMwODctNDk0ZS00OGMxLWFjMjEtZTZiOTRiMDFlOTNlNjM4ODgwMjU4ODYxODc3MDYz" data-config-modal-style="side"></div><script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script><link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css"><div id="snipcart-summary-bar" style="position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -87,24 +87,7 @@ _iub.csConfiguration = {"countryDetection":true,
   font-size: 0.95rem;
   z-index: 9999;
   display: none;"><span class="snipcart-show-cart" title="Apri il carrello" style="cursor: pointer;
-      font-size: 1.3em;
-      margin-right: 10px;
-      user-select: none;">🛒 </span><span>Articoli nel carrello: <span id="snipcart-total-items">0</span> – Totale: €<span id="snipcart-total-price">0.00</span></span></div><script>document.addEventListener('snipcart.ready', () => {
-    Snipcart.store.subscribe(() => {
-      const cart = Snipcart.store.getState().cart;
-      const totalItems = cart.items.count;
-      const totalPrice = cart.total?.toFixed(2);
-
-      const bar = document.getElementById('snipcart-summary-bar');
-      const items = document.getElementById('snipcart-total-items');
-      const price = document.getElementById('snipcart-total-price');
-
-      if (totalItems > 0) {
-        bar.style.display = 'block';
-        items.textContent = totalItems;
-        price.textContent = totalPrice;
-      } else {
-        bar.style.display = 'none';
-      }
-    });
-  });</script></body></html>
+      font-size: 1.6em;
+      margin-right: 20px;
+      margin-left: -10px;
+      user-select: none;">🛒 </span><span>Articoli nel carrello: <span id="snipcart-total-items">0</span> – Totale: €<span id="snipcart-total-price">0.00</span></span></div></body></html>
