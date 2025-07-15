@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-/* Griglia prodotti responsive a 2 colonne */
+/* Griglia prodotti responsive a 3 colonne */
 .griglia-prodotti {
   display: grid;
   grid-template-columns: 1fr; /* default: mobile */
@@ -26,6 +26,18 @@
 @media (min-width: 600px) {
   .griglia-prodotti {
     grid-template-columns: repeat(2, 1fr); /* 2 colonne da tablet in su */
+  }
+}
+
+@media (min-width: 960px) {
+  .griglia-prodotti {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne da desktop in su */
+  }
+}
+
+@media (min-width: 1200px) {
+  .griglia-prodotti {
+    grid-template-columns: repeat(4, 1fr); /* 4 colonne da super-desktop in su */
   }
 }
 
