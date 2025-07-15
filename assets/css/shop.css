@@ -90,4 +90,9 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+/* Fix Snipcart: spazio extra per non far coprire l'ultimo prodotto dal footer del carrello */
+.snipcart-cart__content {
+  padding-bottom: 100px !important;
+}
 }
