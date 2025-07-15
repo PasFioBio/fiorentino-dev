@@ -105,24 +105,26 @@
 
 /* Fix SimpleLightBoxGalery: apre le immagini all'80% dello spazio */
 
-/* Ridimensiona l'immagine nella lightbox */
-.vbox-content {
+
+/* Ridimensiona e centra l'immagine nella lightbox Venobox */
+
+.vbox-open .vbox-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px;
+  height: 100vh;
+}
+
+.vbox-open .vbox-content img {
   max-width: 80vw !important;
   max-height: 80vh !important;
   width: auto !important;
   height: auto !important;
   margin: auto !important;
-  display: block;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  display: block !important;
   border-radius: 8px;
-}
-
-/* Centra verticalmente la lightbox */
-.vbox-container {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 100vh !important;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
 /* Disattiva scroll del body quando è attiva */
