@@ -101,3 +101,12 @@
   padding-bottom: 100px !important;
 }
 }
+
+
+/* Fix Snipcart: apre le immagini all'80% dello spazio */
+
+.venobox .vbox-content img {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
