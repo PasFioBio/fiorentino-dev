@@ -117,4 +117,10 @@ _iub.csConfiguration = {"countryDetection":true,
         updateBar(updatedCart);
       });
     });
-  });</script><link rel="stylesheet" href="/media/plugins/simple-lightbox/simple-lightbox.min.css"><script src="/media/plugins/simple-lightbox/simple-lightbox.min.js"></script></body></html>
+  });</script><link rel="stylesheet" href="/media/plugins/simple-lightbox/simple-lightbox.min.css"><script src="/media/plugins/simple-lightbox/simple-lightbox.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
+    const lightbox = new SimpleLightbox('a.lightbox', {
+      captionsData: 'data-title',
+      captionDelay: 250,
+      close: true
+    });
+  });</script></body></html>
