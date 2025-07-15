@@ -1,20 +1,42 @@
-/* Griglia dei prodotti */
-.griglia-prodotti {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding-bottom: 4rem;
-  margin-top: 2rem;
+/* Contenitore principale */
+.pagina-sottolinea {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
-/* Singolo prodotto */
+/* Sezione introduttiva */
+.info-sottolinea {
+  max-width: 960px;
+  margin: 0 auto 2rem auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Griglia prodotti responsive a 2 colonne */
+.griglia-prodotti {
+  display: grid;
+  grid-template-columns: 1fr; /* default: mobile */
+  gap: 2rem;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .griglia-prodotti {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne da tablet in su */
+  }
+}
+
+/* Card prodotto */
 .prodotto {
-  text-align: center;
-  background: #fff;
+  background: #fcf8f2;
+  border: 1px solid #ddd;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  padding: 1.5rem 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1.5rem;
+  text-align: center;
+  transition: 0.3s ease;
 }
 
 /* Effetto hover su prodotto */
